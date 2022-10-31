@@ -16,12 +16,6 @@ function speak(){
   let utterance = new SpeechSynthesisUtterance(text);
   utterance.voice=voices[document.querySelector("#voice-select").value]
   speechSynthesis.speak(utterance);
-  document.querySelector("img").setAttribute("src","assets/images/smiling-open.png")
-  while(speechSynthesis.speaking){
-    console.log("speaking")
-    if(speechSynthesis.paused)break;
-  }
-  document.querySelector("img").setAttribute("src","assets/images/smiling.png")
 }
 function init() {
   // TODO
